@@ -1,0 +1,1051 @@
+    @import url('https://fonts.googleapis.com/css2?family=DIN:ital,wght@0,400;0,700;1,400&display=swap');
+    /* Replace with the correct font import if required */
+
+    :root {
+        --bg-main: #0f172a;
+        /* dark slate */
+        --bg-card: #ffffff;
+        /* clean white */
+        --text-main: #1e293b;
+        /* slate text */
+        --text-muted: #64748b;
+        /* muted text */
+        --accent: #2563eb;
+        /* professional blue */
+        --border-soft: #e5e7eb;
+    }
+
+    body {
+        margin: 30px;
+
+        background-color: var(--bg-main);
+        /* <- this sets the full background color */
+        color: var(--text-main);
+        /* optional: sets default text color */
+
+        /*background-image: url("C:\\Users\\irvin\\OneDrive\\Documents\\CNSC\\2nd Year\\App Dev\\Pics\\star-rail-dream's-edge.gif"); 
+        background-size: cover;  
+        background-repeat: no-repeat; 
+        background-position: center;  
+        background-attachment: fixed;
+        height: 100vh; */
+    }
+
+
+
+    /* Initially, show all content */
+    body * {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+
+    .content {
+        width: 100%;
+        height: fit-content;
+    }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=DIN:ital,wght@0,400;0,700;1,400&display=swap');
+    /* Replace with the correct font import if required */
+
+    .tabs {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        font-family: 'DIN', sans-serif;
+        /* Use PF DIN TEXT PRO MEDIUM or fallback */
+        background-color: rgb(255, 255, 255);
+        /* Light teal background with slight transparency */
+        padding: 15px;
+        /* Add some padding for spacing */
+        border-radius: 10px;
+        /* Rounded corners for a modern look */
+        box-shadow: 0 4px 6px rgba(45, 98, 106, 0.2);
+        /* Subtle shadow for depth */
+        color: rgba(0, 0, 0, 0.65);
+        /* Base text color with slight transparency */
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        /* Stack the labels and content vertically */
+    }
+
+
+    .tabs__label {
+        padding: 10px 16px;
+        cursor: pointer;
+        font-family: 'DIN', sans-serif;
+        /* Use PF DIN TEXT PRO MEDIUM or fallback */
+        background-color: rgba(255, 255, 255, 0.65);
+        /* Teal button-like background with slight transparency */
+        color: rgba(0, 0, 0, 0.65);
+        /* Light text color with slight transparency */
+        border: 2px solid rgba(0, 0, 0, 0.65);
+        /* Muted accent border with slight transparency */
+        border-radius: 5px;
+        /* Slightly rounded corners */
+        margin: 5px;
+        /* Add spacing between labels */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Smooth hover effects */
+    }
+
+
+    .tabs__label:hover {
+        background-color: #428a91;
+        /* Slightly darker teal on hover */
+        color: #f0f1c7;
+        /* Keep text color consistent */
+    }
+
+    .tabs__label:active {
+        background-color: #d8db9f;
+        /* Vibrant orange for active state */
+        color: #f0f1c7;
+        /* Keep light text for contrast */
+    }
+
+    /* Active tab when selected */
+    .tabs__radio:checked+.tabs__label {
+        background-color: #d8db9f;
+        /* Active orange background */
+        color: #f0f1c7;
+        /* Text color remains light for readability */
+        border-bottom: 3px solid #428a91;
+        /* Teal border for active tab */
+    }
+
+
+
+
+    .tabs__radio {
+        display: none;
+    }
+
+    .tabs__content {
+        order: 1;
+        width: 100%;
+        height: fit-content;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: bolder;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-family: 'DIN', sans-serif;
+
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        border: 4px solid rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(45, 98, 106, 0.2);
+
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+    .home-container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 30px;
+    }
+
+    .home-profile img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #2d626a;
+    }
+
+    .home-professional-text {
+        text-align: left;
+    }
+
+    .home-professional-text h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    .home-professional-text h3,
+    .home-professional-text h4 {
+        font-size: 1.6rem;
+        font-style: italic;
+        margin: 5px 0;
+        color: #000000;
+    }
+
+    .home-professional-text p {
+        font-size: 1.3rem;
+        margin-top: 15px;
+        font-weight: normal;
+        line-height: 1.6;
+        color: #000000;
+    }
+
+    .about-me-container {
+        display: flex;
+        /* Use flexbox for layout */
+        align-items: center;
+        /* Align items at the top */
+        justify-content: space-evenly;
+        border-bottom: 2px solid #2d626a;
+        /* Add a thin border below */
+    }
+
+    .about-me-container-reverse {
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        /* Align items at the top */
+        justify-content: space-evenly;
+        border-bottom: 2px solid #2d626a;
+        /* Add a thin border below */
+
+    }
+
+    .about-me-text {
+        margin-bottom: 30px;
+        padding: 20px;
+        color: #000000;
+        /* Darker teal for text */
+        border-radius: 8px;
+        /* Rounded text box */
+        font-size: x-large;
+        line-height: 1.5;
+        /* Improve readability */
+        text-align: left;
+    }
+
+    .about-me-text-header {
+        font-style: italic;
+        margin-bottom: 30px;
+        padding: 20px;
+        color: #000000;
+        /* Darker teal for text */
+        border-radius: 8px;
+        /* Rounded text box */
+        font-size: xx-large;
+        line-height: 1.5;
+        /* Improve readability */
+    }
+
+    .about-me-image img {
+        width: 350px;
+        /* Restrict image width */
+        margin-bottom: 10%;
+        margin-top: 50px;
+        align-items: center;
+        object-fit: cover;
+        /* Ensure the image fits nicely */
+        border-radius: 50%;
+        /* Circular images for a modern look */
+        border: 3px solid #000000;
+        /* Slight border around the image */
+    }
+
+    .skills-technologies-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .skills-technologies-container {
+        width: 28%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 3px solid #000000;
+        /* Complete border around the container */
+        margin-bottom: 20px;
+        padding: 30px;
+        border-radius: 108px;
+        gap: 20px;
+    }
+
+    .skills-technologies-name {
+        color: #000000;
+        /* Darker orange for text */
+        font-size: 2rem;
+        /* Use rem units for better scalability */
+        line-height: 1.5;
+        /* Improve readability */
+        font-weight: bold;
+        /* Emphasize the name */
+        margin: 0;
+        /* Remove unnecessary margins */
+    }
+
+    .icon-name {
+        color: #FF9900;
+        /* Keep the same color for consistency */
+        font-size: 2rem;
+        /* Match the size of family-name */
+        line-height: 1.5;
+        /* Improve readability */
+        visibility: hidden;
+        /* Hide the text but maintain space */
+    }
+
+
+    .skills-technologies-image-left,
+    .skills-technologies-image-right {
+        margin: 0;
+        /* Reset default margins */
+    }
+
+    .skills-technologies-image-left img,
+    .skills-technologies-image-right img {
+        object-fit: cover;
+        width: 250px;
+        /* Adjust image size for better balance */
+        height: 250px;
+        border-radius: 50%;
+        /* Circular images for a modern look */
+        border: 3px solid #2706e1;
+        /* Slightly thicker border for emphasis */
+    }
+
+    .skills-technologies-text {
+        /* Increase spacing around the text */
+        color: #2d626a;
+        font-size: 1.3rem;
+
+        /* Rounded text box */
+        font-family: 'Arial', sans-serif;
+        /* Use rem units for consistency */
+    }
+
+    #css-icon {
+        object-fit: contain;
+    }
+
+    #vs-icon {
+        object-fit: contain;
+    }
+
+
+    .projects-container {
+        width: 100%;
+        margin: 20px auto;
+        /* Center the container */
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 675px;
+    }
+
+    .projects-name {
+        width: 30%;
+        font-size: 3rem;
+        padding: 0.5rem;
+    }
+
+    .projects-name p {
+        font-size: medium;
+    }
+
+
+    .projects-text {
+        font-size: 1.5rem;
+        text-align: center;
+        /* Center the text */
+        margin-bottom: 10px;
+        /* Space below the text */
+    }
+
+    .projects-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .projects-header-text {
+        font-size: xx-large;
+    }
+
+
+
+    /* Add hover effects for the content */
+    /*
+        .tabs__content:hover {
+            background-color: #aecdc7; 
+            color: #428a91;
+        }
+        */
+    /* Optional: Style the <br> tag for consistency */
+    .tabs__content br {
+        margin-bottom: 8px;
+        /* Add spacing between lines for better readability */
+    }
+
+
+
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+        width: 95%;
+        height: fit-content;
+    }
+
+    .contact-context {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(255 255 255);
+        color: rgb(0 0 0);
+        border: 3px solid rgb(0 0 0 / 80%);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(45, 98, 106, 0.3);
+        text-align: center;
+        font-family: 'DIN', sans-serif;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+    .contact-context h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+
+    .contact-context h2 {
+        margin: 10px 0;
+        font-size: 2rem;
+    }
+
+    .contact-context h6 {
+        font-size: 0.9rem;
+        color: rgba(45, 98, 106, 0.6);
+        margin-top: 10px;
+    }
+
+    .contact-context a {
+        color: rgba(45, 98, 106, 0.9);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .contact-context a:hover {
+        color: rgba(111, 156, 151, 0.9);
+    }
+
+    .contact-context .email {
+        font-weight: normal;
+        color: rgba(45, 98, 106, 0.8);
+    }
+
+    @media (max-width:426px) {
+        .contact-context h1 {
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        .contact-context h2 {
+            font-size: 1rem;
+        }
+
+        .email {
+            font-size: 1rem;
+        }
+
+        .contact-context h6 {
+            font-size: 1rem;
+            color: rgba(45, 98, 106, 0.6);
+        }
+    }
+
+
+    .contact-send {
+        display: flex;
+        width: 50%;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        /* Optional: Adds space between each form group */
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .form-group h5 {
+        margin-bottom: 5px;
+        /* Space between the label and the input */
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+        /* Makes the input take full width */
+        height: fit-content;
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-family: 'DIN', sans-serif;
+        font-weight: bold;
+        line-height: 1.6;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(45, 98, 106, 0.2);
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn {
+        width: 100%;
+        /* Makes the input take full width */
+        height: fit-content;
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-family: 'DIN', sans-serif;
+        font-weight: bold;
+        line-height: 1.6;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(45, 98, 106, 0.2);
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn:hover,
+    .btn:focus,
+    .btn:active {
+        background-color: rgba(255, 161, 24, 0.7);
+        /* Transparent color */
+        color: rgba(45, 98, 106, 1);
+        border-color: rgba(111, 156, 151, 1);
+    }
+
+
+    .form-control:focus {
+        background-color: rgba(240, 241, 199, 1);
+        color: rgba(45, 98, 106, 1);
+        border-color: rgba(111, 156, 151, 1);
+        outline: none;
+    }
+
+
+    .home-widgets {
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .widget-card {
+        flex: 1;
+        min-width: 250px;
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 2px solid #000000;
+        text-align: center;
+    }
+
+    .widget-card h3 {
+        color: #000000;
+        margin-bottom: 15px;
+    }
+
+
+    #weather-location {
+        color: black;
+    }
+
+    #weather-temp {
+        color: black;
+    }
+
+    #weather-desc {
+        color: black;
+    }
+
+    .widget-card button {
+        margin-top: 15px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #2d626a;
+        color: white;
+        cursor: pointer;
+    }
+
+    .widget-card button:hover {
+        background-color: #1f474d;
+    }
+
+    #quote-text {
+        font-size: xx-large;
+    }
+
+    #quote-head {
+        font-size: xx-large;
+    }
+
+    #quote-btn {
+        padding: 15px 25px;
+        /* Bigger clickable area */
+        font-family: 'DIN', sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        /* Matches "xx-large" text */
+        border: none;
+        border-radius: 12px;
+        /* Slightly larger radius for proportion */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+
+
+
+
+
+    /* Container */
+    .donation-container {
+        max-width: 650px;
+        margin: 40px auto;
+        padding: 40px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Headings */
+    .donation-container h1 {
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    .donation-container p {
+        margin-bottom: 25px;
+        color: #555;
+    }
+
+    /* Form Groups */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group h5 {
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        transition: 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #2d626a;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(45, 98, 106, 0.1);
+    }
+
+    /* Payment Options Layout */
+    .payment-options {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    /* Payment Cards */
+    .payment-card {
+        flex: 1;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 15px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        background: #fafafa;
+    }
+
+    .payment-card img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    .payment-card span {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* Hide radio button */
+    .payment-card input {
+        display: none;
+    }
+
+    /* Hover Effect */
+    .payment-card:hover {
+        border-color: #2d626a;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Selected Style */
+    .payment-card.selected {
+        border-color: #2d626a;
+        background: #f4fafa;
+        box-shadow: 0 8px 18px rgba(45, 98, 106, 0.15);
+    }
+
+    /* Button */
+    .btn {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        background: #2d626a;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-top: 15px;
+    }
+
+    .btn:hover {
+        background: #1f474d;
+    }
+
+    /* Status Messages */
+    .donation-status {
+        margin-top: 15px;
+        font-weight: 600;
+    }
+
+    .success {
+        color: #1a7f37;
+    }
+
+    .error {
+        color: #d32f2f;
+    }
+
+    .processing {
+        color: #2d626a;
+    }
+
+
+    @media (max-width: 768px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: space-around;
+        }
+
+
+        .contact-context {
+            padding: 15px;
+            margin: 0px;
+            width: 90%;
+        }
+
+        .contact-send {
+            width: 90%;
+            /* Make form elements take full width on smaller screens */
+            padding: 0px
+        }
+
+        .form-group h5 {
+            font-size: 0.9rem;
+            /* Adjust font size for smaller screens */
+        }
+
+        .form-control {
+            font-size: 0.9rem;
+            /* Adjust font size for smaller screens */
+        }
+
+        .btn {
+            padding: 10px 15px;
+            /* Adjust padding for smaller screens */
+            font-size: 0.9rem;
+            /* Adjust font size for smaller screens */
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+        }
+    }
+
+    @media (max-width: 426px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: space-around;
+        }
+
+
+        .contact-context {
+            padding: 15px;
+            margin: 0px;
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 426px) {
+        .tabs {
+            width: 90%;
+        }
+
+        .tabs__content {
+            width: 85%;
+        }
+
+        .tabs__label {
+            font-size: x-small;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .home-professional-text h1 {
+            font-size: xx-large;
+        }
+
+        .home-professional-text h3 {
+            font-size: x-large;
+        }
+
+        .home-professional-text h4 {
+            font-size: large;
+        }
+
+
+        .projects-content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: stretch;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: stretch;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .projects-header-text {
+            font-size: medium;
+        }
+
+        .projects-name {
+            font-size: medium;
+            width: 100%;
+        }
+
+        #css-icon {
+            object-fit: contain;
+        }
+
+        #vs-icon {
+            object-fit: contain;
+        }
+
+        /* Target devices with a width of 768px or less (e.g., phones, small tablets) */
+        .home-container,
+        .about-me-container,
+        .about-me-container-reverse,
+        .skills-technologies-container {
+            flex-direction: column;
+            /* Stack elements vertically */
+            align-items: center;
+            /* Center align the content */
+            justify-content: center;
+            /* Center justify the content */
+
+        }
+
+
+        .about-me-image img,
+        .skills-technologies-image-left img,
+        .skills-technologies-image-right img {
+            width: 150px;
+            /* Shrink images for smaller screens */
+            height: auto;
+            /* Maintain aspect ratio */
+            margin: 10px 0;
+            /* Add spacing around images */
+        }
+
+        .about-me-text {
+            font-size: 0.95rem;
+            /* Adjust font size for better readability */
+            /* Reduce padding */
+        }
+
+        .skills-technologies-text {
+            font-size: 0.85rem;
+            /* Adjust font size for better readability */
+            /* Reduce padding */
+        }
+
+        .about-me-text-header {
+            font-size: 1.2rem;
+            /* Reduce header font size */
+        }
+
+        .skills-technologies-name,
+        .icon-name {
+            font-size: 1.5rem;
+            /* Adjust text size */
+        }
+
+        .home-text {
+            font-size: 1rem;
+            /* Reduce font size for smaller screens */
+            text-align: center;
+            /* Center-align text for better readability */
+        }
+
+        .skills-technologies-container {
+            width: auto;
+            gap: 10px;
+            /* Reduce gap between elements */
+            border-radius: 8px;
+            /* Slightly rounder corners */
+        }
+
+        .about-me-image img {
+            width: 170px;
+            /* Smaller image size for portrait layouts */
+            border-radius: 50%;
+            /* Keep circular shape */
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .skills-technologies-text {
+            font-size: 1.1rem;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+
+        /* For small phones and horizontal tablets */
+        .home-image-left img,
+        .home-image-right img {
+            object-position: center 1%;
+            /* Center horizontally */
+            object-fit: cover;
+            width: 400px;
+            /* Stretch to fill available width */
+            height: 200px;
+            /* Maintain aspect ratio */
+        }
+
+        .home-text {
+            padding: 20px;
+            font-size: x-large;
+        }
+
+        .home-profile img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #2d626a;
+            scale: 75%;
+
+        }
+
+    }
+
+    @media (max-width: 426px) {
+
+        .home-professional-text h1 {
+            font-size: x-large;
+        }
+
+        .home-professional-text h3 {
+            font-size: large;
+        }
+
+        .home-professional-text h4 {
+            font-size: large;
+        }
+
+        .widget-card {
+            min-width: 80%;
+        }
+
+        .payment-options {
+            margin-left: 40px;
+        }
+
+        /* For small phones and horizontal tablets */
+        .home-image-left img,
+        .home-image-right img {
+            object-position: center 1%;
+            /* Center horizontally */
+            object-fit: cover;
+            width: 210px;
+            /* Stretch to fill available width */
+            height: 110px;
+            /* Maintain aspect ratio */
+        }
+
+        .home-text {
+            padding: 20px;
+            font-size: xx-small;
+        }
+    }
+
+
+    .tabs__radio:checked+.tabs__label {
+        font-weight: bold;
+        color: #000000;
+        border-bottom: 2px solid #000000;
+    }
+
+    .tabs__radio:checked+.tabs__label+.tabs__content {
+        display: initial;
+    }

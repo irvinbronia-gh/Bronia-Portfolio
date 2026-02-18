@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "juhoTTNmHAB8tfwqO",
+            });
+        })();
+    </script>
+
+    <title>Bronia Portfolio</title>
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="tabs">
+            <input type="radio" class="tabs__radio" name="tabs-profile" id="tab-home" checked>
+            <label for="tab-home" class="tabs__label">Home</label>
+            <div class="tabs__content">
+                <div class="home-container">
+
+                    <div class="home-profile">
+                        <img src="photo/irvin.jpg" alt="Irvin C. Bronia">
+                    </div>
+
+                    <div class="home-professional-text">
+                        <h1>Irvin C. Bronia</h1>
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <h4>Specialization: Web Development</h4>
+
+                        <p>
+                            I am a BSIT student in Camarines Norte State College with a strong interest in web
+                            development,
+                            user interface design. I enjoy building responsive, interactive, and user-centered web
+                            applications using modern web technologies.
+                        </p>
+
+                        <p>
+                            My goal is to continuously improve my technical skills and develop more
+                            efficient, scalable, and user-friendly systems.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="home-widgets">
+
+                    <!-- Weather Widget -->
+                    <div class="widget-card">
+                        <h3>Current Weather</h3>
+
+                        <!-- City input -->
+                        <input type="text" id="city-input" placeholder="Enter city name" />
+                        <button id="get-weather-btn">Get Weather</button>
+
+                        <!-- Weather info -->
+                        <p id="weather-location">Loading...</p>
+                        <p id="weather-temp"></p>
+                        <p id="weather-desc"></p>
+
+                        <!-- Map container -->
+                        <div id="map" style="width: 100%; height: 300px; margin-top: 10px;"></div>
+                    </div>
+
+                    <!-- Leaflet CSS -->
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+                    <!-- Leaflet JS -->
+                    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+                    <!-- Quote Generator -->
+                    <div class="widget-card" id="quotes">
+                        <h3 id="quote-head">Quotes to live by:</h3>
+                        <p id="quote-text">Click the button to load a quote.</p>
+                        <div id="quote-loading" class="spinner" style="display:none;"></div>
+
+                        <p id="quote-author"></p>
+                        <button id="quote-btn" onclick="loadQuote()">New Quote</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <input type="radio" class="tabs__radio" name="tabs-profile" id="tab-about-me">
+            <label for="tab-about-me" class="tabs__label">About Me</label>
+            <div class="tabs__content">
+
+                <div class="about-me-container">
+                    <div class="about-me-container-texts">
+                        <div class="about-me-text-header">
+                            Who am I?
+                        </div>
+
+                        <div class="about-me-text">
+                            I am Irvin C. Bronia, born and raised in the town of Labo, Camarines Norte.<br>
+                            I am currently a student of Camarines Norte State College.<br>
+                            I was born on November 2, 2004.<br>
+                            And I am currently 21 years old as of writing this.<br>
+                            I currently reside in the small barangay of San Francisco. <br>
+                        </div>
+                    </div>
+
+                    <div class="about-me-image">
+                        <img src="photo/irvin.jpg">
+                    </div>
+
+                </div>
+
+                <div class="about-me-container-reverse">
+                    <div class="about-me-container-texts">
+                        <div class="about-me-text-header">
+                            How far have I come?
+                        </div>
+
+                        <div class="about-me-text">
+                            I started my educational journey at the local daycare in the barangay.<br>
+                            I attended Kindergarten at the local elementary (Labo Elementary School). <br>
+                            I completed my Grade 1-6 in the same local elementary.<br>
+                            I completed my Junior High School (Grade 7-10) at Labo Science and Technology High
+                            School.<br>
+                            I Completed my Senior High School (Grade 11-12) in the same School.<br>
+                            I am now third year at Camarines Norte State College with the Course of Bachelor of Science
+                            in Information Technology. <br>
+                        </div>
+                    </div>
+
+                    <div class="about-me-image">
+                        <img src="photo/education-background.png">
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="about-me-container">
+                    <div class="about-me-container-texts">
+                        <div class="about-me-text-header">
+                            What is my plan for the future?
+                        </div>
+
+                        <div class="about-me-text">
+                            Right now, my main focus is completing my course and graduating successfully.<br>
+                            After that, I’m looking forward to gaining practical experience and applying what I’ve
+                            learned in a real-world setting. <br>
+                            I want to grow both professionally and personally, exploring opportunities that challenge me
+                            and help me build a solid foundation for the future.<br>
+                        </div>
+                    </div>
+
+                    <div class="about-me-image">
+                        <img src="photo/goal.png">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <input type="radio" class="tabs__radio" name="tabs-profile" id="tab-skills-technologies">
+            <label for="tab-skills-technologies" class="tabs__label">Skills-Technologies</label>
+            <div class="tabs__content">
+                <div class="skills-techologies-header">
+                    <h1>These are the technologies that I have used and utilized so far</h1>
+                </div>
+                <div class="skills-technologies-content">
+
+
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/html-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                HTML
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/css-icon.png" id="css-icon">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                CSS
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/js-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                JavaScript
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/premiere-pro-icon.png" id="premiere-pro-icon">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                Adobe Premiere
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/vscode-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name" id="vs-icon">
+                                Visual Code
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/vsstudio-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                Visual Studio
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/figma-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                Figma
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/java-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                Java
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="skills-technologies-container">
+                        <div class="skills-technologies-img-name">
+                            <div class="skills-technologies-image-left">
+                                <img src="photo/python-icon.png">
+                            </div>
+
+                            <div class="skills-technologies-name">
+                                Python
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <input type="radio" class="tabs__radio" name="tabs-profile" id="tab-projects">
+            <label for="tab-projects" class="tabs__label">Projects</label>
+            <div class="tabs__content">
+                <div class="projects-content">
+                    <div class="projects-header-text">
+                        These are the previous projects I made or helped making
+                    </div>
+
+                    <div class="projects-container">
+                        <div class="projects-container">
+
+                            <div class="projects-name">
+                                Figma Prototype
+                                <p> A Figma Prototype I made for HCI, the concept is a automatic medical scanner </p>
+                                <p>Figma is only used</p>
+                            </div>
+
+                            <div class="projects-content">
+                                <iframe style="border: 5px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%"
+                                    src="https://embed.figma.com/proto/TVz3ImYvE4DkKH1QD28T1H/VitalScans-Prototype?node-id=70-1442&starting-point-node-id=70%3A1442&embed-host=share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-container">
+                        <div class="projects-container">
+
+                            <div class="projects-name">
+                                <a href="https://www.youtube.com/watch?v=gY3sHZ2rscM" target="_blank"
+                                    style="text-decoration: none; color: inherit;">
+                                    Video Editing
+                                </a>
+                                <p>A Music Video Parody I edited for IT-Elctive</p>
+                                <p> Premiere and After-Effects were used</p>
+                            </div>
+
+
+                            <div class="projects-content">
+                                <iframe style="border: 5px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/gY3sHZ2rscM?si=4fxL9S1PAuUic5cy"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-container">
+                        <div class="projects-container">
+
+                            <div class="projects-name">
+                                Profile website
+                                <p> A fully personalized profile website I made in AppDev/Webdev</p>
+                                <p> HTML, CSS, JavaScript, Netlify were used</p>
+                            </div>
+
+
+                            <div class="projects-content">
+                                <iframe src="https://bronia-site.netlify.app/" width="100%" height="100%"
+                                    style="border: 5px solid rgba(0, 0, 0, 0.1);" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" class="tabs__radio" name="tabs-profile" id="tab-contact">
+            <label for="tab-contact" class="tabs__label">Contact</label>
+            <div class="tabs__content">
+                <div class="contact-email">
+                    <div class="row">
+                        <div class="contact-context">
+                            <h1>You can reach me at these channels</h1>
+
+                            <h2>
+                                <a href="https://www.facebook.com/IrvinBronia" target="_blank">Facebook: Irvin C.
+                                    Bronia</a><br>
+                                <a href="https://www.linkedin.com/in/irvin-bronia-707a913b0" target="_blank">LinkedIn:
+                                    Irvin Bronia</a><br>
+                                <a href="https://github.com/irvinbronia-gh" target="_blank">GitHub: irvincbronia-gh</a>
+                            </h2>
+
+                            <h2>
+                                Gmail: <span class="email">irvinc.bronia@gmail.com</span><br>
+                                <span class="email">irvinbronia@gmail.com</span>
+                            </h2>
+
+                            <h2>Or you can send me a message by filling up the form</h2>
+                        </div>
+
+                        <div class="contact-send">
+                            <div class="form-group">
+                                <h5 for="name">Name:</h5>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Your Name" />
+                            </div>
+                            <div class="form-group">
+                                <h5 for="email">Email:</h5>
+                                <input type="email" class="form-control" id="email" placeholder="Enter Your Email" />
+                            </div>
+                            <div class="form-group">
+                                <h5 for="message">Message:</h5>
+                                <textarea id="message" rows="3" class="form-control"></textarea>
+                            </div>
+                            <button class="btn" onclick="sendMail()">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" class="tabs__radio" name="tabs-profile" id="tab-donate">
+            <label for="tab-donate" class="tabs__label">Donate/Pay</label>
+            <div class="tabs__content">
+                <div class="donation-container">
+
+                    <h1>Mock Donation / Payment</h1>
+                    <p>This is a simulated payment process for academic purposes only.</p>
+
+                    <div class="form-group">
+                        <h5>Full Name:</h5>
+                        <input type="text" id="pay-name" class="form-control" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <h5>Email:</h5>
+                        <input type="email" id="pay-email" class="form-control" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <h5>Amount (₱):</h5>
+                        <input type="number" id="pay-amount" class="form-control" placeholder="Enter amount" min="1"
+                            step="1">
+
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-group">
+                        <h5>Select Payment Method:</h5>
+
+                        <div class="payment-options">
+
+                            <label class="payment-card">
+                                <input type="radio" name="payment-method" value="gcash">
+                                <img src="photo/gcash-icon.jpeg" alt="GCash">
+                                <span>GCash</span>
+                            </label>
+
+                            <label class="payment-card">
+                                <input type="radio" name="payment-method" value="paypal">
+                                <img src="photo/paypal-icon.jpeg" alt="PayPal">
+                                <span>PayPal</span>
+                            </label>
+
+                            <label class="payment-card">
+                                <input type="radio" name="payment-method" value="card">
+                                <img src="photo/mastercard-icon.jpeg" alt="Card">
+                                <span>Card</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Dynamic Fields -->
+                    <div id="payment-details"></div>
+
+                    <button class="btn" id="pay-btn">Proceed to Pay</button>
+
+                    <div id="payment-status" class="donation-status"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
