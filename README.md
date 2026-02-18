@@ -64,8 +64,6 @@ Via GitHub repository link/Deployed
 	2 Ensure an active internet connection.
     3._____________________
 	
-	
-
 	4. Navigate through tabs to view Home, About Me, Skills, Projects, Contact, and Donate/Pay sections.
 	5. Interact with:
 
