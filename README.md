@@ -55,13 +55,11 @@ The portfolio includes two transaction-based features:
 ---
 
 4. How to Run the Project
-
-	Via folder download
+Via folder download
 	1  Clone or download the project folder.
 	2 Open `index.html` in a web browser (Chrome, Edge, Firefox recommended).
 	3 Ensure an active internet connection to allow API calls and map loading.
-
-	Via GitHub repository link/Deployed
+Via GitHub repository link/Deployed
 	1 Open the live site via the GitHub Pages link: 
 	2 Ensure an active internet connection.
     3._____________________
