@@ -64,7 +64,7 @@ The portfolio includes two transaction-based features:
 	Via GitHub repository link/Deployed
 	1.2 Open the live site via the GitHub Pages link: 
 	2.2 Ensure an active internet connection.
-	3.2 ---------------------------------
+	
 	
 
 	4. Navigate through tabs to view Home, About Me, Skills, Projects, Contact, and Donate/Pay sections.
